@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Prevents scrolling if the content overflows */
+}
+
+#sidebar {
+    width: 300px; /* Adjust width as necessary */
+    background-color: #4CAF50; /* Adjust color as necessary */
+    color: white;
+    top: 60px;
+    padding: 20px;
+    height: 100vh; /* Full height */
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Scrollable contents if sidebar is too long */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1000; /* Stay on top */
+    top: 0; /* Align to the top */
+}
+
+
+#legend {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 1001; /* Ensure it's above the map */
+}
+
+/* ... (rest of the styles) ... */
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative; /* If you want it to be below the map on small screens */
+    }
+    #map {
+        width: 100vw;
+        height: calc(100vh - ());
+        position: relative;
+        top: 0;
+    }
+}
+#right-panel {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 300px; /* Adjust as necessary */
+    height: 100vh;
+    background-color: #f9f9f9; /* Light grey background, adjust as necessary */
+    border-left: 1px solid #ccc; /* Add a left border */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Enable scroll if content is too long */
+    z-index: 1000; /* Ensures the panel stays on top */
+}
+
+#right-panel h3 {
+    color: #333; /* Dark grey text color, adjust as necessary */
+    margin-bottom: 10px;
+}
+
+#right-panel label {
+    display: block;
+    margin-top: 10px;
+    color: #333; /* Dark grey text color, adjust as necessary */
+}
+
+#right-panel select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#right-panel input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Adjust the map to leave space for the right panel */
+#map {
+    left: 300px; /* Space for the left panel */
+    right: 300px; /* Space for the right panel */
+    bottom: 0;
+    top: 60px;
+    position: absolute;
+}
+
+/* You may need to adjust the z-index of the map and side panels if you have overlapping elements */
+#header {
+    background-color: #4CAF50; /* Adjust to match your brand color */
+    color: white;
+    padding: 10px 20px; /* Adjust padding as necessary */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* This will center the items horizontally */
+    position: fixed;
+    width: calc(100vw - 50px); /* Adjust based on the total width of the sidebars */
+    top: 0;
+    left: 300px; /* Adjust this value to match the width of your left sidebar */
+    z-index: 1001; /* Ensure it's above the map and sidebars */
+}
+
+#header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px; /* Adjust size as necessary */
+}
+
+
+#logo {
+    height: 50px; /* Adjust as necessary */
+    /* If the logo is not square, you might want to set the width instead */
+    /* width: 100px; */
+}

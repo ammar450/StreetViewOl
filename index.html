@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Map Application</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+<body>
+    <div id="header">
+        <img src="path_to_logo.png" alt="Logo" id="logo" /> <!-- Replace with your logo's path -->
+        <h1 >TBTTP WEB GIS PORTAL</h1>
+
+        <!-- Add any additional elements for your header here -->
+    </div>
+	<div id="map"></div>
+    <div id="sidebar">
+        
+        <h2>10 Billion Tree Tsunami</h2>
+        <h3>Data Layers</h3>
+        <ul id="data-layers">
+            <li><input type="checkbox" id="anr" /> ANR</li>
+            <li><input type="checkbox" id="block-plantation" /> Block Plantation</li>
+            <li><input type="checkbox" id="linear-plantation" /> Linear Plantation</li>
+            <li><input type="checkbox" id="nurseries" /> Nurseries</li>
+        </ul>
+        <h3>Admin Boundaries</h3>
+        <ul id="admin-boundaries">
+            <li><input type="checkbox" id="provinces" /> Provinces</li>
+            <li><input type="checkbox" id="districts" /> Districts</li>
+        </ul>
+        <h3>Overlays</h3>
+        <ul id="overlays">
+            <li><input type="checkbox" id="ndvi" /> NDVI</li>
+            <li><input type="checkbox" id="parks" /> Parks</li>
+            <li><input type="checkbox" id="anr-overlay" /> ANR</li>
+        </ul>
+        <h3>Search</h3>
+        <div id="search-box">
+            <select id="select-province">
+                <option value="">Select Province</option>
+                <!-- Options for provinces -->
+            </select>
+            <select id="select-district">
+                <option value="">Select District</option>
+                <!-- Options for districts -->
+            </select>
+            <select id="select-year">
+                <option value="">Select Year</option>
+                <!-- Options for years -->
+            </select>
+        </div>
+    </div>
+     
+    <div id="right-panel">
+        <h3>Search</h3>
+        <div id="search-box">
+            <label for="select-province">Select Province</label>
+            <select id="select-province">
+                <option value="">Select Province</option>
+                <!-- Options for provinces -->
+            </select>
+
+            <label for="select-district">Select District</label>
+            <select id="select-district">
+                <option value="">Select District</option>
+                <!-- Options for districts -->
+            </select>
+
+            <label for="select-year">Select Year</label>
+            <select id="select-year">
+                <option value="">Select Year</option>
+                <!-- Options for years -->
+            </select>
+        </div>
+
+        <div id="data-selection">
+            <label for="sites-toggle">Sites</label>
+            <input type="checkbox" id="sites-toggle" />
+
+            <label for="suparco-toggle">Suparco</label>
+            <input type="checkbox" id="suparco-toggle" />
+        </div>
+    </div>
+    
+	
+	
+	<script src="./app.js"></script>
+</body>
+</html>
